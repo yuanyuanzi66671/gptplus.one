@@ -768,6 +768,144 @@
            font-size: 1rem;
            margin-top: 20px;
         }
+
+        /* 新增：代理介绍样式 */
+        /* 使用说明整体 */
+.usage-section {
+  padding: 80px 20px;
+  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* 容器宽度 */
+.usage-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 标题区 */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease;
+}
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+.section-header p {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+/* 步骤卡片 */
+.step-card {
+  background: linear-gradient(135deg, #f0f7ff, #f9f5ff);
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 单步 */
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.step:last-child {
+  margin-bottom: 0;
+}
+
+/* 步骤数字 */
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  margin-top: 4px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.step-number.blue {
+  background: #3b82f6;
+}
+.step-number.green {
+  background: #10b981;
+}
+
+/* step 文字 */
+.step h3 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+.step p {
+  font-size: 16px;
+  color: #4b5563;
+}
+.step .note {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.step .note.blue {
+  color: #2563eb;
+}
+.step .note.green {
+  color: #059669;
+}
+
+/* 代理卡片 */
+.agent-card {
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff7ed, #fffbeb);
+  border: 1px solid #fcd34d;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #92400e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: fadeInUp 1s ease;
+}
+.agent-card .qq {
+  background: #fef3c7;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: #b45309;
+}
+.agent-card .arrow {
+  color: #f97316;
+  font-size: 22px;
+}
+
+/* 动画 */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
     </style>
 </head>
 <body>
@@ -854,50 +992,50 @@
                     </video>
                 </div>
             </div>
-    <!-- 使用说明区域 -->
-    <section class="py-20 px-4 bg-white">
-        <div class="container mx-auto opacity-0 fade-in" id="usage" style="opacity: 1;">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">💡 使用说明</h2>
-                    <p class="text-lg text-gray-600">简单两步，快速完成充值</p>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">发卡网自助购买卡密</h3>
-                                    <p class="text-gray-600">通过发卡网平台自助购买充值卡密，操作简单快捷</p>
-                                    <p class="text-sm text-blue-600 mt-2">💰 有需要代理价的请联系管理员QQ获取优惠</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">打开 gptplus.biz 进行充值</h3>
-                                    <p class="text-gray-600">访问充值网站，按照页面提示完成充值操作</p>
-                                    <p class="text-sm text-green-600 mt-2">📺 可以结合上方视频教程一步步操作</p>
-                                </div>
-                            </div>
+<!-- 使用说明区域 -->
+<section class="usage-section">
+    <div class="container" id="usage">
+        <div class="content">
+            <div class="section-header">
+                <h2>💡 使用说明</h2>
+                <p>简单两步，快速完成充值</p>
+            </div>
+            
+            <div class="steps">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step">
+                        <div class="step-number blue">1</div>
+                        <div>
+                            <h3>发卡网自助购买卡密</h3>
+                            <p>通过发卡网平台自助购买充值卡密，操作简单快捷</p>
+                            <p class="note blue">💰 有需要代理价的请联系管理员QQ获取优惠</p>
                         </div>
                     </div>
                     
-                    <!-- 代理联系提示 -->
-                    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-6 border border-yellow-200 text-center">
-                        <div class="flex items-center justify-center text-gray-700">
-                            <span class="mr-2 text-2xl">👥</span>
-                            <span class="font-semibold text-lg">需要代理价优惠？</span>
-                            <span class="mx-3 text-orange-500">→</span>
-                            <span class="font-mono bg-orange-100 px-4 py-2 rounded-lg text-orange-700 font-semibold">QQ: 2423700892</span>
+                    <!-- Step 2 -->
+                    <div class="step">
+                        <div class="step-number green">2</div>
+                        <div>
+                            <h3>打开 gptplus.biz 进行充值</h3>
+                            <p>访问充值网站，按照页面提示完成充值操作</p>
+                            <p class="note green">📺 可以结合上方视频教程一步步操作</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 代理联系提示 -->
+            <div class="agent-card">
+                <span class="icon">👥</span>
+                <span class="title">需要代理价优惠？</span>
+                <span class="arrow">→</span>
+                <span class="qq">QQ: 2423700892</span>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
             
             <div class="features">
                 <div class="feature-card">

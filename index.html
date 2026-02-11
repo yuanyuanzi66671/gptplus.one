@@ -42,7 +42,7 @@
       "serviceType": "ChatGPT Plus会员代充服务",
       "provider": {
         "@type": "Organization",
-        "name": "GPT123专业代充",
+        "name": "gpt123.shop专业代充",
         "url": "https://gpt123.shop"
       },
       "name": "ChatGPT Plus官网代充",
@@ -74,7 +74,7 @@
           "name": "ChatGPT Plus代充需要多久到账？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "使用我们的24小时自助充值系统，通常5分钟内即可完成ChatGPT Plus会员充值并到账。"
+            "text": "使用我们的24小时自助充值系统，通常2分钟内即可完成ChatGPT Plus会员充值并到账。"
           }
         },
         {
@@ -98,7 +98,7 @@
     {
       "@type": "HowTo",
       "name": "如何充值ChatGPT Plus会员",
-      "description": "通过GPT123平台充值ChatGPT Plus会员的完整步骤",
+      "description": "通过gpt123.shop平台充值ChatGPT Plus会员的完整步骤",
       "totalTime": "PT5M",
       "step": [
         {
@@ -1274,12 +1274,12 @@
       
             <!-- ✅ 新增：对比表格 -->
             <section class="comparison-section">
-                <h2 style="text-align: center; font-size: 1.8rem; color: #1e293b; margin-bottom: 30px; font-weight: 700;">为什么选择GPT123？</h2>
+                <h2 style="text-align: center; font-size: 1.8rem; color: #1e293b; margin-bottom: 30px; font-weight: 700;">为什么选择gpt123.shop？</h2>
                 <table class="comparison-table">
                     <thead>
                         <tr>
                             <th>对比项</th>
-                            <th>GPT123（我们）</th>
+                            <th>gpt123.shop（我们）</th>
                             <th>其他平台</th>
                         </tr>
                     </thead>
@@ -1430,7 +1430,7 @@
                 <div class="faq-item">
                     <h3>ChatGPT Plus代充需要多久到账？</h3>
                     <div class="faq-answer">
-                        <p>使用我们的24小时自助充值系统，通常5分钟内即可完成充值并到账。高峰期可能需要10-15分钟。如遇特殊情况，可联系客服QQ:2423700892（9:00-24:00人工在线）。</p>
+                        <p>使用我们的24小时自助充值系统，通常2分钟内即可完成充值并到账。高峰期可能需要10-15分钟。如遇特殊情况，可联系客服QQ:2423700892（9:00-24:00人工在线）。</p>
                     </div>
                 </div>
 
@@ -1452,8 +1452,8 @@
                     <h3>GPT Plus会员有什么权益？</h3>
                     <div class="faq-answer">
                         <p>ChatGPT Plus会员包含以下权益：<br>
-                        • GPT-4无限次使用（免费版每3小时仅40次）<br>
-                        • 优先访问最新功能（GPT-4 Turbo、DALL-E 3图像生成、Code Interpreter等）<br>
+                        • GPT-5无限次使用（免费版每3小时仅40次）<br>
+                        • 优先访问最新功能（GPT-5.2 Turbo、DALL-E 3图像生成、Code Interpreter等）<br>
                         • 更快的响应速度<br>
                         • 高峰期优先访问权限，避免排队<br>
                         • 更长的上下文记忆（32K tokens）</p>
@@ -1465,7 +1465,7 @@
                     <div class="faq-answer">
                         <p>非常简单，两步完成：<br>
                         <strong>步骤1：</strong>访问发卡网购买充值卡密（自动发货）<br>
-                        <strong>步骤2：</strong>打开代充系统网站 shop.gptai.vip，输入卡密和OpenAI账号邮箱，提交后等待5分钟即可。<br>
+                        <strong>步骤2：</strong>打开代充系统网站 shop.gptai.vip，输入卡密和OpenAI账号邮箱token信息，提交后等待2分钟即可。<br>
                         详细操作请参考页面中的视频教程。</p>
                     </div>
                 </div>
@@ -1480,7 +1480,7 @@
                 <div class="faq-item">
                     <h3>可以帮别人代充吗？</h3>
                     <div class="faq-answer">
-                        <p>可以！您只需要提供对方的OpenAI账号注册邮箱即可。我们不需要账号密码，只通过邮箱识别账户。代充成功后，对方的账号会自动升级为ChatGPT Plus会员。</p>
+                        <p>可以！您只需要提供对方的OpenAI账号注册邮箱token信息即可。我们不需要账号密码，只通过邮箱识别账户。代充成功后，对方的账号会自动升级为ChatGPT Plus会员。</p>
                     </div>
                 </div>
             </section>
@@ -1624,10 +1624,14 @@
 
             // ✅ 新增：实时订单提示
             const notifications = [
-                "用户138****5678刚刚完成了ChatGPT Plus充值",
+                "用户138****5578刚刚完成了ChatGPT Plus充值",
+                "用户186****9012刚刚购买了GPT Pro会员",
+                "用户156****0259刚刚购买了Gemini 3.0 Pro会员",
                 "用户186****9012刚刚购买了GPT Plus会员",
+                "用户199****1512刚刚购买了ChatGPT plus 自助充值",
+                "用户177****9312刚刚购买了GPT Plus会员",
                 "用户159****3456成功充值ChatGPT Plus",
-                "用户173****7890刚刚完成了GPT4会员购买",
+                "用户173****7890刚刚完成了GPT5会员购买",
                 "用户152****2345成功充值OpenAI Plus会员"
             ];
 
@@ -1647,7 +1651,7 @@
             }
 
             // 每30秒显示一次
-            setInterval(showLiveNotification, 30000);
+            setInterval(showLiveNotification, 10000);
             // 页面加载5秒后首次显示
             setTimeout(showLiveNotification, 5000);
         });
